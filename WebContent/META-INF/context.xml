@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<!-- the new database connection pooling stuff -->
+<!-- see: http://tomcat.apache.org/tomcat-5.5-doc/jndi-datasource-examples-howto.html -->
+
+<Context  crossContext="true" reloadable="true" debug="1">
+
+ 
+   
+<Resource name="jdbc/ingres" auth="Container"
+          type="javax.sql.DataSource" driverClassName="com.ingres.jdbc.IngresDriver"
+          url="jdbc:ingres://192.168.1.7:II7/clinic;user=ingres;password=ingres;char_encode=UTF8"
+          username="" password="" maxTotal="20" maxIdle="10" maxWaitMillis="-1"/>
+
+ <!-- 
+<Resource name="jdbc/ingres" auth="Container"
+          type="javax.sql.DataSource" driverClassName="com.ingres.jdbc.IngresDriver"
+          url="jdbc:ingres://localhost:II7/clinic;char_encode=UTF8;user=ingres;password=ingres"
+          username="" password="" maxTotal="20" maxIdle="10" maxWaitMillis="-1"/>
+-->          
+
+        
+</Context>
